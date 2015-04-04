@@ -3,19 +3,10 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
-    <%= button_link_to Spree.t(:new_store), new_object_url,  :icon => 'icon-plus', :id => 'admin_new_store_link' %>
-  </li>
+    <%= button_link_to Spree.t(:new_store), new_object_url, :class => "btn-success", :icon => 'add', :id => 'admin_new_store_link' %>
 <% end %>
 
-<table class="index" id='listing_stores'>
-  <colgroup>
-    <col style="width: 120px">
-    <col style="width: 80px">
-    <col style="width: 80px">
-    <col style="width: 220px">
-    <col style="width: 15%">
-  </colgroup>
+<table class="table" id='listing_stores'>
   <thead>
     <th><%= Spree.t(:store_name) %></th>
     <th><%= Spree.t(:store_code) %></th>
