@@ -11,7 +11,9 @@ module SpreeMultiDomain
         end
       end
 
-      Spree::Config.searcher_class = Spree::Search::MultiDomain if Spree::Config.searcher_class == Spree::Core::Search::Base
+      if Spree::Config.searcher_class == Spree::Core::Search::Base
+        Spree::Config.searcher_class = Spree::Search::Core::MultiDomain
+      end
       ApplicationController.send :include, SpreeMultiDomain::MultiDomainHelpers
     end
 
