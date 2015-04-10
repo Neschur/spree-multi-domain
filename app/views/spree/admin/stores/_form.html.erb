@@ -18,10 +18,10 @@
   <div class="form-group col-md-2">
     <%= f.field_container :default do %>
       <%= f.label :default, Spree.t(:default) %>
-      <div class="container">
+      <div>
         <%= f.radio_button :default, "true", :class => '' %> <%= Spree.t(:yes) %>
       </div>
-      <div class="container">
+      <div>
         <%= f.radio_button :default, "false", :class => '' %> <%= Spree.t(:no) %>
       </div>
 
